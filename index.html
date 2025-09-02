@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gaming World</title>
+    <meta name="description" content="An immersive look into the world of gaming, featuring essential gear and interactive elements.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --bg-color: #0c0a25;
+            --container-bg: rgba(20, 15, 60, 0.6);
+            --text-color: #e0e0ff;
+            --primary-color: #00e5ff;
+            --secondary-color: #ff00e5;
+            --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        body {
+            font-family: 'Orbitron', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: var(--container-bg);
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1,
+        h2 {
+            color: var(--primary-color);
+            text-shadow: 0 0 10px var(--primary-color), 0 0 20px rgba(0, 229, 255, 0.5);
+            transition: all 0.3s ease-in-out;
+        }
+        
+        h1:hover,
+        h2:hover {
+            transform: scale(1.05);
+        }
+        
+        p {
+            font-size: 1.1em;
+            color: #b0b0d0;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        li {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid var(--secondary-color);
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px var(--secondary-color);
+            width: 80%;
+            text-align: left;
+        }
+        
+        li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--secondary-color), 0 0 30px rgba(255, 0, 229, 0.5);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            background-color: var(--secondary-color);
+            box-shadow: 0 0 20px var(--secondary-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>My Gaming World 🚀</h1>
+        <p id="main-text">Gaming is my passion. It's a way to explore new realms, engage in epic stories, and connect with people from across the globe.</p>
+
+        <section>
+            <h2>My Favorite Games</h2>
+            <ul id="games-list">
+                <li>Call Of Duty</li>
+                <li>Honor Of Kings</li>
+                <li>Dota2</li>
+            </ul>
+        </section>
+
+        <div class="button-group">
+            <button id="change-text-btn" class="btn">Change Description</button>
+            <button id="add-item-btn" class="btn secondary">Add a New Game</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
